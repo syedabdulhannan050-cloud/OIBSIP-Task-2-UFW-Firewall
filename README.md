@@ -35,6 +35,13 @@ A local HTTP server responded to a request sent to `127.0.0.1`. This confirms lo
 ### Script
 The `ufw_configuration.sh` script applies the firewall rules, sets default policies, enables logging, activates UFW, and displays the final status.
 
+### Traffic Testing Limitation
+UFW was enabled and its rules were verified using `sudo ufw status verbose`. Port 80 is configured as `DENY IN`. A local HTTP server responded to a localhost request, confirming that the server works; however, this does not prove that incoming HTTP traffic is blocked. Testing from a separate machine was not performed because a second machine was unavailable.
+
 ### Conclusion
 UFW was configured and activated with explicit allow and deny rules. Firewall status and rules were verified. Further testing from a separate machine is required to demonstrate actual incoming traffic blocking.
+
+
+
+
 
